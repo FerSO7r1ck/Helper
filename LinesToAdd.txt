@@ -1,0 +1,25 @@
+<Import Project="..\UnityCommon.props" />
+
+<ItemGroup>
+<Reference Include="UnityPlayer">
+<SpecificVersion>False</SpecificVersion> <HintPath>$(UnityWSAPlayerDir)Players\UAP\il2cpp\$(PlatformTarget)\$(Configuration)\UnityPlayer.winmd</HintPath>
+</Reference>
+</ItemGroup>
+<ItemGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64' OR '$(Configuration)|$(Platform)'=='Release|x64'">
+<Content Include="$(UnityWSAPlayerDir)Players\UAP\il2cpp\$(PlatformTarget)\$(Configuration)\WinPixEventRuntime_UAP.dll" />
+</ItemGroup>
+
+<ItemGroup>
+<Content Include="$(SolutionDir)build\bin\$(Platform)\$(Configuration)\GameAssembly.dll" />
+<Content Include="$(SolutionDir)build\bin\$(Platform)\$(Configuration)\GameAssembly.pdb" />
+</ItemGroup>
+
+<ItemGroup>
+<Content Include="Resource.res">
+</Content>
+<Content Include="StoreManifest.xml">
+</Content>
+<Content Include="Data\**">
+<ExcludeFromResourceIndex>true</ExcludeFromResourceIndex>
+</Content>
+</ItemGroup>
