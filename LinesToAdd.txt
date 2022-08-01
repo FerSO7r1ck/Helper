@@ -23,3 +23,8 @@
 <ExcludeFromResourceIndex>true</ExcludeFromResourceIndex>
 </Content>
 </ItemGroup>
+
+<ItemGroup>
+<Content Include="$(UnityWSAPlayerDir)Players\UAP\il2cpp\$(PlatformTarget)\$(Configuration)\baselib.dll" />
+<Content Include="$(UnityWSAPlayerDir)Players\UAP\il2cpp\$(PlatformTarget)\$(Configuration)\baselib.pdb" />
+</ItemGroup>
