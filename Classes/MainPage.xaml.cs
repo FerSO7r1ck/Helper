@@ -156,6 +156,14 @@ namespace UWPApp
             }
         }
 
+        private void LaunchUnity()
+        {
+            appCallbacks.SetSwapChainPanel(GetSwapChainPanel());
+            appCallbacks.SetCoreWindowEvents(Window.Current.CoreWindow);
+            appCallbacks.InitializeD3DXAML();
+
+        }
+
         public class DotNetBridge : IDotNetBridge
         {
 
@@ -171,13 +179,6 @@ namespace UWPApp
                 Debug.WriteLine("Inside MyFunction2: " + arg);
             }
         }
-
-        private void LaunchUnity()
-        {
-             appCallbacks.SetSwapChainPanel(GetSwapChainPanel());
-             appCallbacks.SetCoreWindowEvents(Window.Current.CoreWindow);
-             appCallbacks.InitializeD3DXAML();
-
-        }
+        
     }
 }
